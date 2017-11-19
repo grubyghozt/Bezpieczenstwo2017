@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home</title>
+    <!-- Bootstrap core CSS-->
+    <link href="/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="/resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="bg-dark">
+<div class="container">
+    <h1 class="text-center mx-auto mt-5 text-light">What do you want to do?</h1>
+    <div class="card mx-auto mt-5 p-2 bg-dark">
+        <a class="btn btn-lg btn-outline-light my-2" th:href="@{/my_account/transfer}">Transfer</a>
+        <a class="btn btn-lg btn-outline-light my-2" th:href="@{/my_account/my_transfers}">My transfers</a>
+        <form class="mx-auto" method="post" th:action="@{/my_account/logout}">
+            <button class="btn btn-lg btn-outline-light my-2" onclick="this.parentNode.submit()">Logout</button>
+        </form>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="/resources/vendor/jquery/jquery.min.js"></script>
+<script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>
